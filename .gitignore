@@ -1,28 +1,14 @@
-# Compiled Object files
-*.slo
-*.lo
+# ignore temporary files
+*~
+*.swap
+
+# ignore objects and archives
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
 *.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
+# ignore data files
+*.dat
+
+# ignore personal stuff
+writup
+

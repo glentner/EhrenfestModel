@@ -1,0 +1,77 @@
+
+\input{../src/preamble.tex}
+
+\begin{document}
+	
+	\thispagestyle{plain}
+
+	\begin{flushleft}
+		\LARGE{\textbf{A numerical simulation of the Ehrenfest model of diffusion}}
+	\end{flushleft}
+	
+	\noindent\makebox[\linewidth]{\rule{\textwidth}{0.5pt}}
+
+	\bigskip
+		
+	\begin{flushright}
+	\begin{minipage}[t]{0.85\textwidth}	
+		\par{\Large{\textbf{G. Lentner}}\par}
+		\bigskip
+		\par{\small{\textit{
+				LL15 Natural Science Building, University of Louisville,
+				Louisville, KY 40292 USA}}\par}
+		\par{\small{\textit{
+				email: geoffrey.lentner@louisville.edu}}\par}
+	\end{minipage}
+	\end{flushright}
+
+	\vspace{\baselineskip}
+
+	\begin{flushright}
+	\begin{minipage}[t]{0.85\textwidth}
+		\textbf{Abstract: } I present here a code for the Ehrenfest model of  \textit{N} 
+		particles in two containers. The code is written in C++ and parallelized using
+		OpenMP. The parallelization is of iteration and not the simulation. I was able to
+		evolve the state of the particles to a Poincare' cycle in modest time. For a 
+		system of 28 particles, the code ran 100 iterations in 26.28 minutes using 16 
+		threads and measured an average Poincare' cycle of 2.518$\times10^9$ steps. 
+		The code is available from it's master online repository: 
+		\texttt{\small http://github.com/gLENTNER/EhrenefestModel.git}
+	\end{minipage}
+	\end{flushright}
+
+	\begin{flushright}
+	\begin{minipage}[t]{0.85\textwidth}
+		\par{\small{\textbf{Key words: } methods: numerical, statistical}\par}
+	\end{minipage}
+	\end{flushright}
+
+	\vspace*{2\baselineskip}
+
+	\begin{multicols}{2}[]
+		
+		\section{Description}
+
+		The code is written in C++ and follows an object-oriented design pattern.
+		The primary simulation routine is encapsulated inside a \textit{Model} 
+		class. This object takes information from a parsing routine about the
+		environment of interest (e.g., number of particles) and follows a system
+		from its initial state until either a Poincare' cycle or equilibrium has
+		been reached, whichever occurs last. The structure of the code is 
+		depicted in Figure~\ref{fig:structure}
+
+		\begin{figure*}[t!]
+			\captionsetup{width=0.8\textwidth}
+			\centering
+			\includegraphics[width=0.8\textwidth]{figures/Structure.pdf}
+			\caption{Above is a simplistic structure diagram of the code.
+			The elements bordered in blue are part of the}
+			\label{fig:structure}
+		\end{figure*}
+
+
+	\end{multicols}
+
+	%\input{sourcecode.tex}	
+	
+\end{document}	
