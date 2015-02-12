@@ -67,7 +67,7 @@ int main( const int argc, const char *argv[] ) {
 
 		// save data to file
 		if ( verbose ) {
-			std::cout << "\n\n Writing data to \"" << parser -> GetFileName( );
+			std::cout << "\n\n Writing data to \"" << parser -> GetFileName( )
 			          << "\" ... ";
 		}
 		
@@ -79,7 +79,7 @@ int main( const int argc, const char *argv[] ) {
 
 			out_file.close( );
 
-		} else throw IOError("Failed to open output file!");
+		} else throw Ehrenfest::IOError("Failed to open output file!");
 
 		// display time elapsed
 		if ( verbose ) {
@@ -88,15 +88,15 @@ int main( const int argc, const char *argv[] ) {
 		}
 
 		// clean up memory
-		Parser::Release( );
-		Monitor::Release( );
+		Ehrenfest::Parser::Release( );
+		Ehrenfest::Monitor::Release( );
 		delete[] model;
 
-	} catch ( const Usage& NoError ) {
+	} catch ( const Ehrenfest::Usage& NoError ) {
 		// usage statement was printed in Parser	
 		return 0;
 
-	} catch ( const IOError& Error ) {
+	} catch ( const Ehrenfest::IOError& Error ) {
 //		if ( out_file.is_open( ) )
 //			out_file.close( );
 		std::cerr << Error.what( ) << std::endl;
