@@ -10,5 +10,5 @@
 *.dat
 
 # ignore personal stuff
-writup/*
+#writup/*
 
