@@ -6,8 +6,9 @@ Visualize data output of EhrenfestModel code.
 from __future__ import print_function
 from sys import version_info
 
-import matplotlib, numpy as np, os, sys
+import matplotlib, numpy as np, os, sys, fnmatch
 from matplotlib import pyplot as plot 
+from scipy.interpolate import interp1d as interp
 
 matplotlib.rcParams['figure.facecolor'] = 'w'
 plot.ion()
@@ -92,22 +93,23 @@ def PoincarePlot(data, **kwargs):
 	"""
 	Create smooth curve of Poincare cycle times.
 
-	Arguments:
-
-	Results:
+	Arguments: data: <class 'numpy.ndarray'> or <class 'list'>
+	              A one dimensional array containing the counts for the number 
+	              of steps to the poincare cycle. Can also be a list containing
+					  such arrays.
 
 	Options:
 	"""
 
-	# standard labels for plot
-	label = []
-	for size in sizes:
-		label.append('$N = %' % size)
+	if data is list:
+		for i, sample in enumerate(data):
+			mean   = sample.sum() / len(sample)
+			x      = range(  )
+			smooth = interp(x, sample, kind='cubic')
+			plot.plot(x, smooth(x))
+	else:
+		x = range( np.shape( data )[0])
+		smooth = interp(x, data, kind='cubic')
+		plot.plot(x, smooth(x))
 
-	# create plot
-	fig = Figure(figsize=(4,3), dpi=200)
-	ax  = fig.add_subplot(111)
-	for i, x in enumerate(smoothed_data):
-		ax.plot(x, f(x), label=label[i])
-
-if __name__ == '__main__':
+#if __name__ == '__main__':

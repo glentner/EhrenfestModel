@@ -44,7 +44,7 @@ int main( const int argc, const char *argv[] ) {
 
 		// set parallelism for OpenMP
 		omp_set_num_threads( parser -> GetNumThreads( ) );
-
+		
 		// declare the models
 		Ehrenfest::Model **model = new Ehrenfest::Model *[num_trials];
 		for ( int i = 0; i < num_trials; i++ )

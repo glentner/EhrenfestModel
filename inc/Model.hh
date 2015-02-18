@@ -11,8 +11,6 @@
 // See LICENSE file (GPLv2)
 //
 
-
-
 #ifndef _MODEL_HH_
 #define _MODEL_HH_
 
