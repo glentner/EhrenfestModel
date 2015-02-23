@@ -1,6 +1,6 @@
 # ignore temporary files
 *~
-*.swap
+*.swp
 
 # ignore objects and archives
 *.o

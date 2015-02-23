@@ -34,5 +34,5 @@ main: ${lib}/main.cc
 
 # clear all objects and archives
 clean:
-	@rm -rf ${obj}{*.o,*.a} ${exe}
+	@rm -rf ${obj}/{*.o,*.a} ${exe}
 
