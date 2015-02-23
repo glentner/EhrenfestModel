@@ -54,7 +54,7 @@ int main( const int argc, const char *argv[] ) {
 		#pragma omp parallel for shared(model)
 		for ( int i = 0; i < num_trials; i++ ){
 			
-			// progress bar (displayed immediately)
+			// progress bar (displayed by '0' thread only)
 			if ( !omp_get_thread_num( ) && verbose > 1 )
 				display -> Progress( i, num_trials, omp_get_num_threads( ) );
 		

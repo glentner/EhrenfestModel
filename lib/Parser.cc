@@ -50,24 +50,24 @@ void Parser::Interpret( const int argc, const char *argv[] ) {
 	//display usage
 	if ( argc == 1 ) {
 		std::cout << 
-			"\n usage: EhrenfestModel --num-threads=<int> [, options]\n\n"
-			" A simulation of the Ehrenfest model of diffusion for N particles in"
-			" two boxes.\n"
-			"\n"
-			"    Arguments: --num-particles= <int>\n"
-			"                   Number of particles for the simulation (N).\n"
-			"\n"
-			"    Options:   --num-trials= <int>\n"
-			"                   Number of trials to run for the model, default=30.\n"
-			"\n"
-			"               --num-threads= <int>\n"
-			"                   Number of threads for OpenMP, default=1.\n"
-			"\n"
-			"               --output-file= <char*>\n"
-			"                   Name of output file, default=\"EhrenfestModel.dat\".\n"
-			"\n"
-			"               --set-verbose= <int>\n"
-			"                   Verbosity (choose 0, 1, 2), default=2\n\n";
+		"\n usage: EhrenfestModel --num-particles=<int> [Options]\n\n"
+		" A simulation of the Ehrenfest model of diffusion for N particles in"
+		" two boxes.\n"
+		"\n"
+		"    Arguments: --num-particles= <int>\n"
+		"                   Number of particles for the simulation (N).\n"
+		"\n"
+		"    Options:   --num-trials= <int>\n"
+		"                   Number of trials to run for the model, default=30.\n"
+		"\n"
+		"               --num-threads= <int>\n"
+		"                   Number of threads for OpenMP, default=1.\n"
+		"\n"
+		"               --output-file= <char*>\n"
+		"                   Name of output file, default=\"EhrenfestModel.dat\".\n"
+		"\n"
+		"               --set-verbose= <int>\n"
+		"                   Verbosity (choose 0, 1, 2), default=2\n\n";
 
 		throw Ehrenfest::Usage( );
 	}
