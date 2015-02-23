@@ -296,8 +296,8 @@ if __name__ == '__main__':
 
 	# available executables ( @functions )
 	executables = {
-		'Equilibrium':  Equilibrium.__doc__ + CyclePlot.__doc__,
-		'Poincare':     Poincare.__doc__   + CyclePlot.__doc__,
+		'Equilibrium' : Equilibrium.__doc__ + CyclePlot.__doc__,
+		'Poincare'    : Poincare.__doc__    + CyclePlot.__doc__,
 		'Distribution': Distribution.__doc__
 		}
 

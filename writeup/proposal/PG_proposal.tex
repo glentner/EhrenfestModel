@@ -1,0 +1,89 @@
+\documentclass[10pt,a4paper,final]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in, headheight=15pt]{geometry}
+\usepackage[bottom]{footmisc}
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small{Physics 565}}
+\fancyhead[C]{\small{Computational Physics}}
+\fancyhead[R]{\small{Term Project - Proposal}}
+
+
+\begin{document}
+
+	\begin{flushleft}
+		\par{\Large{\textbf{Numerical Methods in Quantifying Estimates on
+							the Number of Habitable Bodies in the Milky Way Galaxy}}\par}
+	\end{flushleft}
+
+	\bigskip
+
+	\begin{center}
+		\par{28 October 2014\par}
+		\bigskip
+		\par{Geoffrey Lentner
+		\footnote{Department of Physics \& Astronomy, University of Louisville}
+		\par}
+	\end{center}
+
+	\vspace*{\baselineskip}
+
+	\section{Overview}
+
+		In the wake of the Kepler mission, there has been a boom in the discovery
+		and characterization of exoplanets, and along with that a revival in optimism
+		regarding the existance of other habitable worlds in our Galaxy. One significant
+		question of interest is whether we exist in a relatively prefered location or
+		not in terms of the distance to the nearest habitable planet. Where are
+		we most likely to find our nearest Earth-like neighbor; what is the confidence
+		in this measure.
+		
+		The principle target of investigation for this project is to estimate
+		the expectation and variation in the seperations between habitable planets
+		as a function of galactocentric radius. That is, if we assume a probability
+		distribution function for the galaxy and a total number $N$, we can distribute
+		these $N$ bodies around the galaxy stochastically. This is a Monte Carlo
+		Realization (MCR) of these planets in the Milky Way. For many MCRs, we can
+		solve for the distance to the nearest neighbor of each body, then catalog
+		by radius, to build a function $S(R,N)$ for the expected seperation and
+		for the standard deviation in this measure.
+
+	
+	\section{Implementation}
+
+		I am developing an application for this purpose, implemented in C++, which builds
+		MCRs of the galaxy. The validity of the output is dependent on the input. I've
+		included a number of probability distribution functions (PDFs) that are ``known''
+		to the program, but this will be easily alterable and extensible. The PDFs
+		will be combined and integrated to build a cummulative distribution function (CDF)
+		such that a random variable may be interpolated to give position vectors. A subroutine
+		that manages this process, will have a generating function for building these
+		populations. The main program will iterate over this build process for some desired
+		set of values for $N$ and a given number of trials for each value. Once the
+		populations have been constructed, the nearest neighbor will be found for every
+		body and the results sorted by radius. In order to combine each subsequent trial,
+		the results need to be resampled onto a fixed grid via interpolation. The
+		results will be analyzed for sample mean and standard deviation. The output
+		will be saved to text files, one for every value $N$.
+	
+	\section{Analysis}	
+	
+		I expect that in general, as one moves further out into the disk, the expected
+		distance to the nearest neighbor will grow. I also expect that as the number
+		of habitable planets in the galaxy increases, the standard deviation will
+		diminish. My hypothesis is that I will be able to constrain the number of
+		possible habitable planets in the galaxy considering knowledge of our own
+		environment. If we can establish within a certain confidence interval that there
+		are no habitable planets within a given volume, with that same confidence
+		we can constrain the total allowed planets (understanding that this result
+		is entirely dependent on our choice of PDFs).
+		
+\end{document}	
