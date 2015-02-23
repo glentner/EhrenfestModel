@@ -356,8 +356,8 @@ if __name__ == '__main__':
 		# Check for single input file argument
 		if len(args) > 1:
 			raise ArgumentError(
-				'Only one data file can be used at a time with '
-				'Distribution function. See usage for me details.'
+				'Only one data file can be used at a time with the'
+				'Distribution function. See usage for more details.'
 			)
 		
 		# import data from file 
