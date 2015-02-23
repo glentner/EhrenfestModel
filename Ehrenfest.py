@@ -2,16 +2,14 @@
 # Copyright (c) Geoffrey Lentner 2015. All Rights Reserved.
 # See LICENSE (GPL v2)
 """
-usage: Ehrenfest.py <*.dat files> [**kwargs]
+usage: Ehrenfest.py @function [, file1, file2, ...] [**kwargs]
 
 Visualize data output of EhrenfestModel code.
 """
 
 from __future__ import print_function
-import matplotlib, numpy as np, os, sys, fnmatch
+import sys, numpy as np
 from matplotlib import pyplot as plot
-from scipy.interpolate import interp1d as interp
-matplotlib.rcParams['figure.facecolor'] = 'w'
 
 class ArgumentError(Exception):
 	"""
@@ -28,7 +26,7 @@ def GetData( infile, **kwargs ):
 
 	except IOError as error:
 		print( error )
-		print('From file  %' % input_file)
+		sys.exit(1)
 
 def CyclePlot(data, N=None, **kwargs):
 	"""
@@ -311,7 +309,13 @@ if __name__ == '__main__':
 
 		# Choose function for plotting
 		Plot = Equilibrium if function == 'Equilibrium' else Poincare
-		Plot( cp_data, N, **kwargs )
+		
+		try:
+			Plot( cp_data, N, **kwargs )
+
+		except ArgumentError as error:
+			print( error )
+			sys.exit(1)
 
 	elif function == 'Distribution':
 
