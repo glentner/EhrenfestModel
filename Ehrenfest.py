@@ -2,9 +2,43 @@
 # Copyright (c) Geoffrey Lentner 2015. All Rights Reserved.
 # See LICENSE (GPL v2)
 """
-usage: Ehrenfest.py @function [, file1, file2, ...] [**kwargs]
+usage: Ehrenfest.py @function <data files> [**kwargs]
 
 Visualize data output of EhrenfestModel code.
+
+function: 
+
+	One of three currently available functions to use (i.e., Equilibrium, 
+	Poincare, Distribution).
+
+	*Execute "Ehrenfest.py @function [-h, help]" for usage details.
+
+files:
+
+	Include the name(s) of data files as input to the function. Behavior
+	changes depending on if there is only a single file name given or 
+	multiple; only a single file is allowed for the Distribution function.
+	See the usage of each function for more details.
+
+**kwargs:
+
+	Referring to the Python convention, these will be 'keyword' arguments 
+	to be passed as options to the function being executed. Every function
+	requires however that you at the very least specify the name of the 
+	output file (e.g., output=myfigure.pdf).
+
+Complete examples:
+
+	Plot the dependence of N on the Poincare cycle times on a log scale 
+	for all results of the simulation which output to a directory 'out':
+
+		./Ehrenfest.py @Poincare out/*.dat outfile=pcplot.png yscale=log
+
+	Plot the relative time spent in each configuration (past history) of 
+	simulation results in 'out/EMS_30.dat' using pdflatex:
+
+		./Ehrenfest.py @Distribution out/EMS_30.dat outfile=dist30.pdf \\
+				usetex=True marker=r-
 """
 
 from __future__ import print_function
