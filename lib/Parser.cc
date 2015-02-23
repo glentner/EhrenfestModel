@@ -47,7 +47,7 @@ void Parser::Release( ) {
 // parser the arguments passed from 'main'
 void Parser::Interpret( const int argc, const char *argv[] ) {
 
-	//display usage
+	// display usage
 	if ( argc == 1 ) {
 		std::cout << 
 		"\n usage: EhrenfestModel --num-particles=<int> [Options]\n\n"
@@ -90,7 +90,7 @@ void Parser::Interpret( const int argc, const char *argv[] ) {
 	given["--output-file"]   = false;
 	given["--set-verbose"]   = false;
 
-	// parser input arguments
+	// parse input arguments
 	for ( int i = 1; i < argc; i++ ){
 	
 		// string for this argument
