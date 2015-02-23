@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: build/ProjectGAIA_writeup.aux
+The style file: ieeetr.bst
+Database file #1: ProjectGAIA_writeup.bib
+Warning--empty title in sagan
+Warning--empty author in splinter
+Warning--empty year in splinter
+Warning--empty author in thomas
+Warning--empty year in thomas
+You've used 9 entries,
+            1876 wiz_defined-function locations,
+            518 strings with 4484 characters,
+and the built_in function-call counts, 1506 in all, are:
+= -- 136
+> -- 42
+< -- 0
++ -- 19
+- -- 10
+* -- 94
+:= -- 228
+add.period$ -- 11
+call.type$ -- 9
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 93
+empty$ -- 175
+format.name$ -- 10
+if$ -- 365
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 9
+newline$ -- 32
+num.names$ -- 7
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 32
+stack$ -- 0
+substring$ -- 43
+swap$ -- 21
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 11
+width$ -- 10
+write$ -- 75
+(There were 5 warnings)

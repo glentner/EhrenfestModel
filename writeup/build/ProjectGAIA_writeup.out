@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Probability and Statistics}{}% 2
+\BOOKMARK [1][-]{section.3}{Code Structure}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Tools}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Pseudo-Random Numbers: mt19937}{subsection.3.1}% 5
+\BOOKMARK [3][-]{subsubsection.3.1.2}{SPLine INTERpolation}{subsection.3.1}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Framework}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Main}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.2}{The application class}{subsection.3.2}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Parsing input}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Managing file input/output}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Monitoring progress}{subsection.3.2}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Population management}{subsection.3.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.7}{CDF management}{subsection.3.2}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.8}{PDF base}{subsection.3.2}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.9}{Derived PDF classes}{subsection.3.2}% 16
+\BOOKMARK [1][-]{section.4}{User Interface}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Configuration and new profiles}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{Input files}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.3}{Execution}{section.4}% 20
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 21
+\BOOKMARK [1][-]{section.6}{Acknowledgment}{}% 22

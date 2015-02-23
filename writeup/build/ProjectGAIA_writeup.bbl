@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{drake}
+F.~Drake, ``Discussion of space science board,'' {\em National Academy of
+  Sciences Conference on Extraterrestrial Intelligent Life}, 1961.
+
+\bibitem{sagan}
+I.~Sclkovskii and C.~Sagan {\em Intelligent Life in the Universe}, 1966.
+
+\bibitem{steven}
+G.~Steven, ``The drake equation re-examined,'' {\em Q.Jl Royal Astronomical
+  Society}, 1981.
+
+\bibitem{mt1}
+T.~Nishimura, ``Tables of 64-bit mersenne twisters,'' {\em ACM Transactions on
+  Modeling and Computer Simulation 10}, pp.~348--357, 2000.
+
+\bibitem{mt2}
+M.~Matsumoto and T.~Nishimura, ``Mersenne twister: a 623-dimensionally
+  equidistributed uniform pseudorandom number generator,'' {\em ACM
+  Transactions on Modeling and Computer Simulation 8}, pp.~3--30, 1998.
+
+\bibitem{splinter}
+``Spline interpolation,'' {\em Wikipedia, The Free Encyclopedia}.
+\newblock [Retrieved: December 12, 2014].
+
+\bibitem{thomas}
+``Tridiagonal matrix algorithm,'' {\em Wikipedia, The Free Encyclopedia}.
+\newblock [Retrieved: December 12, 2014].
+
+\bibitem{forgan1}
+D.~Forgan, ``A numerical testbed for hypotheses of extraterrestrial life and
+  intelligence,'' {\em International Journal of Astrobiology}, 2009.
+
+\bibitem{forgan2}
+D.~Forgan and K.~Rice, ``Numerical testbed of the rare earth hypothesis using
+  monte carlo realization techniques,'' {\em International Journal of
+  Astrobiology}, 2010.
+
+\end{thebibliography}
