@@ -64,7 +64,7 @@ def GetData( infile, **kwargs ):
 
 def CyclePlot(data, N=None, **kwargs):
 	"""
-	CyclePlot( data, N=None, **kwargs):
+	CyclePlot( data, N=None, **kwargs ):
 
 	If N=None, *data* is assumed to represent a single data set representing 
 	N particles. The elements are trials of the Ehrenfest model simulation. 
@@ -105,7 +105,7 @@ def CyclePlot(data, N=None, **kwargs):
 	if type(data) is list:
 		for subset in data:
 			if type(subset) is not np.float_:
-				raise TypeError('Expected numpy.ndarray for list.')
+				raise TypeError('Expected numpy.float_ for list.')
 		if not N or len(N) != len(data):
 			raise ValueError('N must have length equal to *data*.')
 	elif type(data) is not np.ndarray:
