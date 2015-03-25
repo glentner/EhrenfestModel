@@ -15,14 +15,14 @@ namespace Ehrenfest {
 
 Random::Random( const unsigned &seed_value, const int &size ) {
 
-   _size = size;
+	_size = size;
 	_generator.seed( seed_value );
 }
 
 int Random::Particle( ) {
 
 	return (int)( (double)( _size ) * _generator( ) /
-			_generator.max( ) );
+		_generator.max( ) );
 }
 
 } // namespace Ehrenfest
