@@ -62,15 +62,13 @@ int main( const int argc, const char *argv[] ) {
 		}
 
 		// complete progress bar
-		if( verbose > 1 )
-			display -> Progress( num_trials, num_trials );
+		if ( verbose > 1 ) display -> Progress( num_trials, num_trials );
 
-		// save data to file
-		if ( verbose ) {
-			std::cout << "\n\n Writing data to \"" << parser -> GetFileName( )
-			          << "\" ... ";
-		}
-		
+		if ( verbose ) std::cout << 
+			"\n\n Writing data to \"" << parser -> GetFileName( ) << 
+			"\" ... ";
+
+		// save data to files
 		std::ofstream out_file( ( parser -> GetFileName( ) ).c_str( ) );
 		if ( out_file.is_open( ) ) {
 
@@ -97,8 +95,6 @@ int main( const int argc, const char *argv[] ) {
 		return 0;
 
 	} catch ( const Ehrenfest::IOError& Error ) {
-//		if ( out_file.is_open( ) )
-//			out_file.close( );
 		std::cerr << Error.what( ) << std::endl;
 		return -1;
 	

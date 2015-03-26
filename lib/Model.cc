@@ -118,7 +118,9 @@ void Model::WriteTo( std::ofstream &out_file ) {
 
 		out_file << std::endl;
 
+	// TODO the IOError doesn't catch the open file!
 	} else throw Ehrenfest::IOError("Output file is not open!");
+	
 }
 
 } // namespace Ehrenfest
