@@ -1,7 +1,7 @@
 ##Ehrenfest Model
 
 This application performs a simple simulation of the Ehrenfest model of 
-diffusion for N particles in two boxes. 
+diffusion for N particles in two containers. 
 
 **Dependencies:**
 The code is parallelized using OpenMP, so this should be available to 
