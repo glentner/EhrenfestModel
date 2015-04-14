@@ -29,7 +29,7 @@ Model::Model( const int &num_particles, const int &index ) {
 	_index = index;
 
 	// initialize vectors.
-	_state.assign( _size, 1 ); 
+	_state.assign( _size, 1 );
 	_history.assign( _size + 1, 0 );
 
 	// set steps to equilibrium as null
@@ -45,14 +45,8 @@ void Model::Evolve( ) {
 	// declare random number generator
 	Ehrenfest::Random random( seed, _size );
 
-	// initialize count
-	int iter = 0;
-
 	// evolve until we have both poincare and equilibrium
-	while( !_poincare || !_equilibrium ) {
-
-		// count step 
-		iter++;
+	for (std::size_t iter = 0; !_poincare || !_equilibrium; iter++){
 
 		// choose particle
 		int particle = random.Particle( );
@@ -105,7 +99,7 @@ bool Model::Poincare( ){
 void Model::WriteTo( std::ofstream &out_file ) {
 
 	if ( !_equilibrium || !_poincare )
-		throw Ehrenfest::ValueError( 
+		throw Ehrenfest::ValueError(
 			"Ehrenfest::Model::Evolve( ) was either "
 			"never run or failed to complete properly!");
 
@@ -120,7 +114,7 @@ void Model::WriteTo( std::ofstream &out_file ) {
 
 	// TODO the IOError doesn't catch the open file!
 	} else throw Ehrenfest::IOError("Output file is not open!");
-	
+
 }
 
 } // namespace Ehrenfest
